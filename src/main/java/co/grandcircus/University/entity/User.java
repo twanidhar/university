@@ -9,7 +9,7 @@ import javax.persistence.InheritanceType;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class User {
+public abstract class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -69,6 +69,8 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public abstract boolean isAdmin();
 
 	@Override
 	public String toString() {

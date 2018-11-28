@@ -13,4 +13,9 @@ public class Admin extends User {
 		super(id, first, last, email, password);
 	}
 
+	@Override
+	public boolean isAdmin() {
+		return true;
+	}
+
 }

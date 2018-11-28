@@ -18,6 +18,11 @@ public class Student extends User {
 		this.address = address;
 	}
 
+	@Override
+	public boolean isAdmin() {
+		return false;
+	}
+
 	public String getPhone() {
 		return phone;
 	}
