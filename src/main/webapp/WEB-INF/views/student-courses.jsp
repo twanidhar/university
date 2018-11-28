@@ -13,11 +13,11 @@
 	<br>
 	<table align="center">
 			<tr>
-				<th> My Course</th><th>Description</th>
+				<th> My Course</th><th>Description</th><th>Current grade</th>
 			</tr>
-			<c:forEach var="course" items="${myCourses}">
+			<c:forEach var="enrolledIn" items="${myCourses}">
 				<tr>
-					<td>${course.name}</td><td>${course.category}</td>
+					<td>${enrolledIn.course.name}</td><td>${enrolledIn.semester}</td><td>${enrolledIn.grade}</td>
 				</tr>
 			</c:forEach>
 		</table>

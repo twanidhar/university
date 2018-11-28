@@ -20,8 +20,8 @@ public class UserDao {
 	@PersistenceContext
 	EntityManager em;
 
-	public List<Enroll> findMyClass(String email) {
-		return em.createQuery("From Enroll WHERE email = :email", Enroll.class).setParameter("email", email)
+	public List<Enroll> findMyClass(Long id) {
+		return em.createQuery("From Enroll AS e WHERE e.student.id = :id", Enroll.class).setParameter("id", id)
 				.getResultList();
 	}
 

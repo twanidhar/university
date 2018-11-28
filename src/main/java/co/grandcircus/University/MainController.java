@@ -36,6 +36,7 @@ public class MainController {
 			return new ModelAndView("index", "message", "Incorrect username or password");
 		}
 
+		session.setAttribute("user", user);
 		if (user.isAdmin()) {
 			return new ModelAndView("redirect:/admin-courses");
 		} else {

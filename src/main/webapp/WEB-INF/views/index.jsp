@@ -13,7 +13,7 @@
 			<legend>Login:</legend>
 				<br> 
 				User Name: <input name="email"/><br><br>
-				Password: <input type="password" value="email" name="password"/><br><br>
+				Password: <input type="password" name="password"/><br><br>
 				<br>
 				<button>Submit</button>
 				<br>
