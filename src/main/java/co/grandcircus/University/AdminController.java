@@ -16,10 +16,10 @@ public class AdminController {
 	@Autowired
 	private UserDao userDao;
 
-	@RequestMapping("/admin/courses")
+	@RequestMapping("/admin-courses")
 	public ModelAndView home() {
 		List<Course> courses = userDao.findCourses();
-		return new ModelAndView("index");
+		return new ModelAndView("admin-courses", "courses", courses);
 	}
 
 }

@@ -30,18 +30,18 @@ public class MainController {
 		User user = userDao.findByEmail(email);
 
 		if (user == null) {
-			return new ModelAndView("login", "message", "Incorrect username or password");
+			return new ModelAndView("index", "message", "Incorrect username or password");
 		}
 		if (!user.getPassword().equals(password)) {
-			return new ModelAndView("login", "message", "Incorrect username or password");
+			return new ModelAndView("index", "message", "Incorrect username or password");
 		}
 
 		if (user.isAdmin()) {
-
+			return new ModelAndView("redirect:/admin-courses");
+		} else {
+			return new ModelAndView("redirect:/student-home");
 		}
 
-		// fix return
-		return null;
 	}
 
 }
