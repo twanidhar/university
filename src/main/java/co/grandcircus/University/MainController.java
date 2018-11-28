@@ -39,7 +39,7 @@ public class MainController {
 		if (user.isAdmin()) {
 			return new ModelAndView("redirect:/admin-courses");
 		} else {
-			return new ModelAndView("redirect:/student-home");
+			return new ModelAndView("redirect:/student-courses");
 		}
 
 	}

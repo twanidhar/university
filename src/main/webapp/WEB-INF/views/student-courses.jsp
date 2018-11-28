@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin</title>
+<title>Student</title>
 </head>
 <body>
 
@@ -13,9 +13,9 @@
 	<br>
 	<table align="center">
 			<tr>
-				<th>Course</th><th>Description</th>
+				<th> My Course</th><th>Description</th>
 			</tr>
-			<c:forEach var="course" items="${courses}">
+			<c:forEach var="course" items="${myCourses}">
 				<tr>
 					<td>${course.name}</td><td>${course.category}</td>
 				</tr>

@@ -20,15 +20,16 @@ public class UserDao {
 	@PersistenceContext
 	EntityManager em;
 
-	public List<Enroll> findMyClass(Long id) {
-		return em.createQuery("From Enroll WHERE id = :id", Enroll.class).setParameter("id", id).getResultList();
+	public List<Enroll> findMyClass(String email) {
+		return em.createQuery("From Enroll WHERE email = :email", Enroll.class).setParameter("email", email)
+				.getResultList();
 	}
 
 	public User findByEmail(String email) {
 		return em.createQuery("From User WHERE email = :email", User.class).setParameter("email", email)
 				.getSingleResult();
 	}
-	
+
 	public List<Course> findCourses() {
 		return em.createQuery("From Course", Course.class).getResultList();
 	}
