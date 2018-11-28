@@ -9,18 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import co.grandcircus.University.dao.AdminDao;
-import co.grandcircus.University.dao.StudentDao;
+import co.grandcircus.University.dao.UserDao;
 import co.grandcircus.University.entity.User;
 
 @Controller
 public class MainController {
 
 	@Autowired
-	private AdminDao adminDao;
-
-	@Autowired
-	private StudentDao studentDao;
+	private UserDao userDao;
 
 	@RequestMapping("/")
 	public ModelAndView index() {
@@ -31,7 +27,7 @@ public class MainController {
 	public ModelAndView postIndex(@RequestParam("email") String email, @RequestParam("password") String password,
 			HttpSession session) {
 
-		User user = studentDao.findByEmail(email);
+		User user = userDao.findByEmail(email);
 
 		if (user == null) {
 			return new ModelAndView("login", "message", "Incorrect username or password");
