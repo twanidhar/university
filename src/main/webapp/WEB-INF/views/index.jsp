@@ -4,9 +4,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Home</title>
 </head>
 <body>
 
+	<form name="myForm" method="post">
+		<fieldset>
+			<legend>Login:</legend>
+				<br> 
+				User Name: <input name="email"/><br><br>
+				Password: <input type="password" name="password"/><br><br>
+				<br>
+				<button>Submit</button>
+				<br>
+		</fieldset>	
+	</form>
+	
 </body>
 </html>
