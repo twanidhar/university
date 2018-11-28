@@ -1,5 +1,8 @@
 package co.grandcircus.University.entity;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Student extends User {
 	private String phone;
 	private String address;

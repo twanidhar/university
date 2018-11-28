@@ -1,5 +1,9 @@
 package co.grandcircus.University.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
 public class Admin extends User {
 
 	public Admin() {
