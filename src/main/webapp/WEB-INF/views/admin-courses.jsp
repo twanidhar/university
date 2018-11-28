@@ -15,10 +15,9 @@
 			<tr>
 				<th>Course</th><th>Description</th>
 			</tr>
-			<c:forEach var="course" items="${ourse}">
+			<c:forEach var="course" items="${courses}">
 				<tr>
-					<td>${coffee.name}</td><td>${coffee.description}</td><td>$ ${coffee.price}</td>
-					<td> <button name="id" type="submit" value="${coffee.id}">Select</button></td>
+					<td>${course.name}</td><td>${course.category}</td>
 				</tr>
 			</c:forEach>
 		</table>
