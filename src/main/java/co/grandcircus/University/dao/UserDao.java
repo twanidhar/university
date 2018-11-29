@@ -20,7 +20,7 @@ public class UserDao {
 	@PersistenceContext
 	EntityManager em;
 
-	public List<Enroll> findMyClass(Long id) {
+	public List<Enroll> findMyClasses(Long id) {
 		return em.createQuery("From Enroll AS e WHERE e.student.id = :id", Enroll.class).setParameter("id", id)
 				.getResultList();
 	}
@@ -36,6 +36,11 @@ public class UserDao {
 
 	public List<Student> findStudents() {
 		return em.createQuery("From Student", Student.class).getResultList();
+	}
+
+	public Enroll findMyClass(Long id) {
+		return em.createQuery("From Enroll As e WHERE e.course.id = :id", Enroll.class).setParameter("id", id)
+				.getSingleResult();
 	}
 
 }
