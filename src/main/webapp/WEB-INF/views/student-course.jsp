@@ -11,8 +11,9 @@
 
 	<h1>Course</h1>
 	<br>
-	<h2>${enroll.course.name }</h2>
+	<h2>${myCourse.course.name}</h2>
 	
+	<a href="/student-courses">Go to student courses</a>
 	
 </body>
 </html>

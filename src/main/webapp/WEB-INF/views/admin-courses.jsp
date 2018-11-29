@@ -22,6 +22,6 @@
 			</c:forEach>
 		</table>
 	
-	
+	<a href="/admin-students">Go to admin students</a>
 </body>
 </html>

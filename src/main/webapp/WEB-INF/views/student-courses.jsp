@@ -19,7 +19,7 @@
 			<c:forEach var="enrolledIn" items="${myCourses}">
 				<tr>
 					<td>${enrolledIn.course.name}</td><td>${enrolledIn.semester}</td><td>${enrolledIn.grade}</td>
-					<td> <button name="id" type="submit" value="${enrolled.course.id}">Select</button></td>
+					<td> <button name="id" type="submit" value="${enrolledIn.course.id}">Select</button></td>
 				</tr>
 			</c:forEach>
 		</table>
